@@ -39,7 +39,7 @@ public class CustomerController {
         return null;
     }
 
-    @RequestMapping(value = "/customerDelByid/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/customerDelByid/{id}", method = RequestMethod.DELETE)
     public boolean delCustomerByID(@PathVariable("id") String ID){
         for (int i = 0; i < customers.size(); i++){
             if(customers.get(i).getID().equals(ID)){
@@ -50,7 +50,7 @@ public class CustomerController {
         return false;
     }
 
-    @RequestMapping(value = "/customerDelByname/{n}", method = RequestMethod.GET)
+    @RequestMapping(value = "/customerDelByname/{n}", method = RequestMethod.DELETE)
     public boolean delCustomerByName(@PathVariable("n") String n){
         for (int i = 0; i < customers.size(); i++){
             if(customers.get(i).getName().equals(n)){
